@@ -15,6 +15,7 @@ alias nr='sudo nala remove'
 alias nu='sudo nala update'
 alias nar='sudo nala autoremove'
 alias ninr='sudo nala install --no-install-recommends'
+alias clone='gh repo clone'
 
 export PATH="$PATH:/usr/sbin:/sbin:/usr/bin/watcom/binl"
 export WATCOM="/usr/bin/watcom"
