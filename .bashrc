@@ -8,12 +8,18 @@ function flash() {
     sudo dd if=$1 of=$2 status=progress
 }
 
+prompt_bottom() {
+    local term_lines=$(tput lines)
+    tput cup $((term_lines - 1)) 0
+}
+
 alias sudo='doas'
 
 #grepp
 alias grep='grep --color=auto'
 
 # Useful aliases
+alias clear='clear; prompt_bottom'
 alias cls='clear'
 alias cd..='cd ..'
 alias ..='cd..'
@@ -57,6 +63,13 @@ function work() {
     codium .
 }
 
+# Commits & pushes to remote repository, with message
+function push() {
+    git add .
+    git commit -m "$1"
+    git push
+}
+
 export PATH="$PATH:/usr/sbin:/sbin:/usr/bin/watcom/binl:/usr/local/go/bin:/home/$(whoami)/.bflat:/home/$(whoami)/.dotnet"
 export WATCOM="/usr/bin/watcom"
 
@@ -65,6 +78,7 @@ export XDG_DATA_HOME="/home/$(whoami)/.local/share"
 SBP_PATH=/home/$(whoami)/repos/sbp
 source /home/$(whoami)/repos/sbp/sbp.bash
 
+prompt_bottom
 sbp set layout powerline
 
 source ~/.local/share/blesh/ble.sh
