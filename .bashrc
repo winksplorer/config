@@ -1,3 +1,6 @@
+# opendoas better
+alias sudo='doas'
+
 # Just a thing for ls
 alias la='exa --icons --git -a --color=auto'
 alias ls='exa --icons --git --color=auto'
@@ -12,8 +15,6 @@ prompt_bottom() {
     local term_lines=$(tput lines)
     tput cup $((term_lines - 1)) 0
 }
-
-alias sudo='doas'
 
 #grepp
 alias grep='grep --color=auto'
