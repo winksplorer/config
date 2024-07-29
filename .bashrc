@@ -20,17 +20,20 @@ prompt_bottom() {
 alias grep='grep --color=auto'
 
 # Useful aliases
-alias clear='clear; prompt_bottom'
+#alias clear='clear; prompt_bottom'
 alias cls='clear'
 alias cd..='cd ..'
 alias ..='cd..'
 alias ni='sudo nala install'
 alias nr='sudo nala remove'
 alias nu='sudo nala update'
+alias nur='sudo nala upgrade'
 alias nar='sudo nala autoremove'
 alias ninr='sudo nala install --no-install-recommends'
 alias clone='gh repo clone'
 alias 7z='7zz'
+
+alias fullupgrade='sudo nala update && sudo nala upgrade'
 
 # Git-clone & Change Directory
 function gcd() {
@@ -76,10 +79,10 @@ export WATCOM="/usr/bin/watcom"
 
 export XDG_DATA_HOME="/home/$(whoami)/.local/share"
 
-SBP_PATH=/home/$(whoami)/repos/sbp
-source /home/$(whoami)/repos/sbp/sbp.bash
+#SBP_PATH=/home/$(whoami)/repos/sbp
+#source /home/$(whoami)/repos/sbp/sbp.bash
 
-prompt_bottom
-sbp set layout powerline
+#prompt_bottom
+#sbp set layout powerline
 
 source ~/.local/share/blesh/ble.sh
