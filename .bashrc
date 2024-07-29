@@ -20,7 +20,7 @@ prompt_bottom() {
 alias grep='grep --color=auto'
 
 # Useful aliases
-#alias clear='clear; prompt_bottom'
+alias clear='clear; prompt_bottom'
 alias cls='clear'
 alias cd..='cd ..'
 alias ..='cd..'
@@ -79,10 +79,10 @@ export WATCOM="/usr/bin/watcom"
 
 export XDG_DATA_HOME="/home/$(whoami)/.local/share"
 
-#SBP_PATH=/home/$(whoami)/repos/sbp
-#source /home/$(whoami)/repos/sbp/sbp.bash
+SBP_PATH=/home/$(whoami)/repos/sbp
+source /home/$(whoami)/repos/sbp/sbp.bash
 
-#prompt_bottom
-#sbp set layout powerline
+prompt_bottom
+sbp set layout powerline
 
 source ~/.local/share/blesh/ble.sh
