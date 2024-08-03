@@ -85,4 +85,7 @@ source /home/$(whoami)/repos/sbp/sbp.bash
 prompt_bottom
 sbp set layout powerline
 
+# bash can do it too.
+shopt -s autocd
+
 source ~/.local/share/blesh/ble.sh
