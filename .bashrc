@@ -2,8 +2,8 @@
 alias sudo='doas'
 
 # Just a thing for ls
-alias la='exa --icons --git -a --color=auto'
-alias ls='exa --icons --git --color=auto'
+alias la='eza --icons --git -a --color=auto'
+alias ls='eza --icons --git --color=auto'
 alias l='ls'
 
 # short dd alias
@@ -24,16 +24,15 @@ alias clear='clear; prompt_bottom'
 alias cls='clear'
 alias cd..='cd ..'
 alias ..='cd..'
-alias ni='sudo nala install'
-alias nr='sudo nala remove'
-alias nu='sudo nala update'
-alias nur='sudo nala upgrade'
-alias nar='sudo nala autoremove'
-alias ninr='sudo nala install --no-install-recommends'
+alias ai='sudo apt install'
+alias ar='sudo apt remove'
+alias au='sudo apt update'
+alias aug='sudo apt upgrade'
+alias aar='sudo apt autoremove'
+alias ainr='sudo apt install --no-install-recommends'
 alias clone='gh repo clone'
-alias 7z='7zz'
 
-alias fullupgrade='sudo nala update && sudo nala upgrade'
+alias fullupgrade='sudo apt update && sudo apt upgrade'
 
 # Git-clone & Change Directory
 function gcd() {
