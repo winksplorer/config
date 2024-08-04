@@ -1,0 +1,20 @@
+#!/bin/bash
+
+action=$(zenity --question --title="System Action" --text="What would you like to do?" --ok-label="Cancel" --extra-button="Reboot" --extra-button="Log Off" --extra-button="Lock" --extra-button="Shutdown")
+
+if [ $? -eq 1 ]; then
+    case $action in
+        "Reboot")
+            systemctl reboot
+            ;;
+        "Shutdown")
+        	systemctl poweroff
+        	;;
+        "Log Off")
+            killall openbox
+            ;;
+        "Lock")
+            i3lock -c 002b36
+            ;;
+    esac
+fi

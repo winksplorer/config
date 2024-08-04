@@ -1,0 +1,6 @@
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+xfsettingsd &
+xfce4-panel &
+picom -b --vsync &
+feh --bg-scale '/home/winksplorer/.a.png' &
+xscreensaver &
