@@ -4,3 +4,4 @@ xfce4-panel &
 picom -b --vsync &
 cd /home/wink/repos/process-wallpaper && ./updateWallpaper.sh > /tmp/wallpaper.log 2>&1 && ./setWallpaper.sh >> /tmp/wallpaper_set.log 2>&1
 xscreensaver --no-splash &
+gnome-keyring-daemon --start --components=secrets &
