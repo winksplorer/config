@@ -2,5 +2,5 @@ nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCom
 xfsettingsd &
 xfce4-panel &
 picom -b --vsync &
-feh --bg-scale '/home/winksplorer/.a.png' &
-xscreensaver &
+cd /home/wink/repos/process-wallpaper && ./updateWallpaper.sh > /tmp/wallpaper.log 2>&1 && ./setWallpaper.sh >> /tmp/wallpaper_set.log 2>&1
+xscreensaver --no-splash &
