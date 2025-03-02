@@ -57,55 +57,55 @@
     <keepBorder>no</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>SGI</name>
+      <name>Helvetica Neue</name>
       <size>12</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Regular</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>SGI</name>
+      <name>Helvetica Neue</name>
       <size>12</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Regular</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>SGI</name>
+      <name>Helvetica Neue</name>
       <size>18</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Regular</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>SGI</name>
+      <name>Helvetica Neue</name>
       <size>18</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Regular</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>SGI</name>
+      <name>Helvetica Neue</name>
       <size>12</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Regular</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>SGI</name>
+      <name>Helvetica Neue</name>
       <size>12</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Regular</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
@@ -129,7 +129,7 @@
   </desktops>
   <resize>
     <drawContents>no</drawContents>
-    <popupShow>Nonpixel</popupShow>
+    <popupShow>Always</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupPosition>Center</popupPosition>
     <!-- 'Center', 'Top', or 'Fixed' -->
@@ -281,7 +281,7 @@
 
     <keybind key="C-A-Delete">
       <action name="Execute">
-        <command>openbox-session-logout</command>
+        <command>systemctl poweroff</command>
       </action>
     </keybind>
 
@@ -292,7 +292,7 @@
       </action>
     </keybind>
 
-    <!-- Launch yass when Ctrl+~ is pressed -->
+    <!-- Launch yass (a screenshot script) when WIn+~ is pressed -->
     <!-- Don't ask why it's called "grave." I don't know. -->
     <keybind key="W-grave">
       <action name="Execute">
@@ -320,9 +320,8 @@
       <action name="Execute">
         <command>thunar</command>
       </action>
-    </keybind>r
+    </keybind>
 
-    <!-- cat -->
     <keybind key="W-t">
       <action name="Execute">
         <command>alacritty</command>

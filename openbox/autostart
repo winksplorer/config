@@ -1,10 +1,10 @@
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 xfsettingsd &
 xfce4-panel &
-picom -b --vsync --backend glx &
-cd /home/wink/repos/process-wallpaper && ./updateWallpaper.sh && feh --bg-fill --no-xinerama wallpaper.png
+fastcompmgr -c -C &
 xscreensaver --no-splash &
 gnome-keyring-daemon --start --components=secrets &
 volumeicon &
-xfconf-query -c xsettings -p /Gtk/FontName -s "SGI Bold 13"
-xfconf-query -c xsettings -p /Gtk/FontName -s "SGI Bold 14"
+xfconf-query -c xsettings -p /Gtk/FontName -s "Helvetica Neue Thin 13"
+xfconf-query -c xsettings -p /Gtk/FontName -s "Helvetica Neue Thin 14"
+sleep 1 && feh --bg-tile /home/wink/Documents/Oil.png &
