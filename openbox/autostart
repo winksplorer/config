@@ -12,4 +12,4 @@ xappkeys &
 dunst -conf /home/wink/.config/dunst/dunstrc &
 sleep 1 && feh --bg-fill /home/wink/Documents/train.jpg &
 tilda &
-xpw7-stats-display &
+kpw7-stats-display &
