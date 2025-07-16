@@ -54,7 +54,7 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>no</keepBorder>
+    <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>Helvetica Neue</name>
@@ -281,7 +281,7 @@
 
     <keybind key="C-A-Delete">
       <action name="Execute">
-        <command>systemctl poweroff</command>
+        <command>/home/wink/Documents/session-logout.sh</command>
       </action>
     </keybind>
 
@@ -330,7 +330,19 @@
 
     <keybind key="XF86AudioPlay">
       <action name="Execute">
-        <command>playerctl play-pause</command>
+        <command>/home/wink/Documents/playpause.sh</command>
+      </action>
+    </keybind>
+
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>/home/wink/Documents/volume.sh</command>
+      </action>
+    </keybind>
+
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>/home/wink/Documents/volume.sh a</command>
       </action>
     </keybind>
   </keyboard>
@@ -372,36 +384,7 @@
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
       </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Up" action="Click">
-        <action name="SendToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Down" action="Click">
-        <action name="SendToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
+      
     </context>
     <context name="Titlebar">
       <mousebind button="Left" action="Drag">

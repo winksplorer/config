@@ -7,4 +7,9 @@ gnome-keyring-daemon --start --components=secrets &
 volumeicon &
 xfconf-query -c xsettings -p /Gtk/FontName -s "Helvetica Neue Thin 13"
 xfconf-query -c xsettings -p /Gtk/FontName -s "Helvetica Neue Thin 14"
-sleep 1 && feh --bg-tile /home/wink/Documents/Oil.png &
+xbindkeys
+xappkeys &
+dunst -conf /home/wink/.config/dunst/dunstrc &
+sleep 1 && feh --bg-fill /home/wink/Documents/train.jpg &
+tilda &
+xpw7-stats-display &
