@@ -1,15 +1,14 @@
-nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
-xfsettingsd &
+#!/bin/bash
+exec > /tmp/openbox-autostart.log 2>&1
+set -x
+
 xfce4-panel &
 fastcompmgr -c -C &
-xscreensaver --no-splash &
-gnome-keyring-daemon --start --components=secrets &
+#xscreensaver --no-splash &
+#gnome-keyring-daemon --start --components=secrets &
 volumeicon &
-xfconf-query -c xsettings -p /Gtk/FontName -s "Helvetica Neue Thin 13"
-xfconf-query -c xsettings -p /Gtk/FontName -s "Helvetica Neue Thin 14"
 xbindkeys
 xappkeys &
 dunst -conf /home/wink/.config/dunst/dunstrc &
-sleep 1 && feh --bg-fill /home/wink/Documents/train.jpg &
-tilda &
+feh --bg-fill /home/wink/Documents/train.jpg &
 kpw7-stats-display &

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+efibootmgr --create --disk /dev/nvme0n1 --part 1 --label "debian (efistub nvme)" --loader EFI/Debian/vmlinuz --unicode "root=UUID=$(findmnt -kno UUID /) rootfstype=$(findmnt -kno FSTYPE /) ro initrd=\\EFI\Debian\\initrd.img quiet amd_iommu=on kvm.ignore_msrs=1 vfio-pci.ids=10de:1380,10de:0fbc"
+#efibootmgr -u

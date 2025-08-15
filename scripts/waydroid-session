@@ -1,0 +1,13 @@
+#!/bin/bash
+
+weston --socket=wayland-0 --width 600 --height 1024 &
+WESTON_PID=$!
+sleep 1.5
+
+waydroid show-full-ui &
+WAYDROID_PID=$!
+
+trap "waydroid session stop; kill $WESTON_PID" EXIT
+
+wait $WESTON_PID
+waydroid session stop
