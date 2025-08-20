@@ -1,11 +1,7 @@
 #!/bin/bash
 
 if xrandr | grep -q "^USB-C-0 connected"; then
-    PRIMARY="USB-C-0"
+    xrandr --output USB-C-0 --primary --mode 3840x2160 --pos 0x0 --rotate normal --rate 59.94
 else
-    PRIMARY="HDMI-0"
+    xrandr --output HDMI-0 --primary --mode 3840x2160 --pos 0x400 --rotate normal --output DP-2 --mode 2560x1440 --pos 3840x0 --rotate right
 fi
-
-xrandr --output "$PRIMARY" --primary --mode 3840x2160 --pos 0x400 --rotate normal \
-       --output DP-2 --mode 2560x1440 --pos 3840x0 --rotate right
-
