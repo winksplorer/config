@@ -1,3 +1,11 @@
 #!/bin/bash
 
-xrandr --output HDMI-0 --primary --mode 3840x2160 --pos 0x400 --rotate normal --output DP-2 --mode 2560x1440 --pos 3840x0 --rotate right
+if xrandr | grep -q "^USB-C-0 connected"; then
+    PRIMARY="USB-C-0"
+else
+    PRIMARY="HDMI-0"
+fi
+
+xrandr --output "$PRIMARY" --primary --mode 3840x2160 --pos 0x400 --rotate normal \
+       --output DP-2 --mode 2560x1440 --pos 3840x0 --rotate right
+
