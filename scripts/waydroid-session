@@ -1,6 +1,6 @@
 #!/bin/bash
 
-weston --socket=wayland-waydroid --width 600 --height 1024 &
+weston --socket=wayland-waydroid --width 540 --height 1200 &
 WESTON_PID=$!
 sleep 1.5
 

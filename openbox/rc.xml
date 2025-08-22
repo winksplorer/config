@@ -340,6 +340,10 @@
         <command>volume-wink a</command>
       </action>
     </keybind>
+
+    <keybind key="W-o">
+      <action name="ToggleAlwaysOnTop"/>
+    </keybind>
   </keyboard>
 
 
