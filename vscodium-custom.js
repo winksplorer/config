@@ -2,8 +2,8 @@
 // This is all ChatGPT code. All of it.
 
 document.body.addEventListener('keydown', (e) => {
-    // ctrl+s flashbang
-    if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+    // ctrl+s and ctrl+c flashbang
+    if ((e.metaKey || e.ctrlKey) && (e.key === 's' || e.key === 'c')) {
         const pulse = document.createElement('div');
         Object.assign(pulse.style, {
             position: 'fixed',
@@ -11,7 +11,7 @@ document.body.addEventListener('keydown', (e) => {
             left: 0,
             width: '100%',
             height: '100%',
-            background: 'rgba(255,255,255,0.07)',
+            background: 'rgba(255,255,255,0.1)',
             pointerEvents: 'none',
             zIndex: 9999,
             animation: 'savePulse 0.3s ease-out'
